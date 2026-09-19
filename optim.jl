@@ -69,10 +69,11 @@ for i in G
             lpad(round(value(Q[i]), digits=5), 10))
 end
 
-println("\nNod    v [vu]    theta [rad]")
+println("\nNod    v [vu]    theta [rad]   nodpris [SEK/pu]")
 for k in N
     println(rpad(k, 5), lpad(round(value(v[k]), digits=4), 8),
-            lpad(round(value(th[k]), digits=5), 12))
+            lpad(round(value(th[k]), digits=5), 12),
+            lpad(round(dual(Pbal[k]), digits=2), 14))
 end
 
 println("\nBåge (k,l)   p_kl [pu]    q_kl [pu]")
